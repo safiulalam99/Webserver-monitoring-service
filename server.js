@@ -13,9 +13,7 @@ const readFromFile = async () => {
     } else {
       const data = JSON.parse(jsonData);
       try {
-        const mappedData = await data.map(
-          (m) => (checkedURL = UrlCheck(m))
-        );
+        const mappedData = await data.map((m) => (checkedURL = UrlCheck(m)));
       } catch (err) {
         console.log(err);
       }
@@ -26,17 +24,24 @@ const readFromFile = async () => {
 const UrlCheck = async (URL) => {
   const errorCode = 404;
   try {
-    await request({ url: URL.url, time: true }, function (error, response, body) {
-      logContent = {
-        name: URL.url,
-        responseTime: !response ? "No response" : response.elapsedTime,
-        statusCode: !response ? errorCode : response.statusCode,
-        body: [!response ? "No response" : body],
-      };
-      dataToLog.push(logContent);
-      writingToFile(dataToLog)
-      console.log(body)
-    });
+    await request(
+      { url: URL.url, time: true },
+      function (error, response, body) {
+        logContent = {
+          name: URL.url,
+          responseTime: !response ? "No response" : response.elapsedTime,
+          statusCode: !response ? errorCode : response.statusCode,
+          body: [!response ? "No response" : body],
+          content_match: response
+            ? body.includes(URL.content)
+              ? true
+              : false
+            : "No response",
+        };
+        dataToLog.push(logContent);
+        writingToFile(dataToLog);
+      }
+    );
   } catch (err) {
     console.log("#####" + err);
   }
@@ -46,7 +51,7 @@ const writingToFile = (logFile) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("SUCCESS!!");
+      console.log("SUCCESS!");
     }
   });
 };
