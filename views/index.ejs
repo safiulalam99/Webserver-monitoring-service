@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        font-family:sans-serif;
+        align-content: center;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        margin: auto;
+        width: 60%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #1d3363;
+    }
+
+    h5 {
+        font-size: medium;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    a {
+        font-family:sans-serif;
+        text-decoration: none;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
+</head>
+
+<body>
+    <h1>Check Website Status</h1>
+
+    <table>
+        <tr>
+            <th>
+                <h5>Website</h5</th>
+            <th>
+                <h5>Last checked</h5</th>
+            <th>
+                <h5>Status</h5</th>
+        </tr>
+        <% for(var i=0; i<text.length; i++) { %>
+            <tr>
+                <th>
+                    <a href="<%= text[i].URL %>">
+                        <%= text[i].URL %>
+                    </a>
+                </th>
+                <th>
+                    <a>
+                        <%= text[i].last_checked %>
+                    </a>
+                </th>
+                <th>
+                    <a>
+                        <%= text[i].status %>
+                    </a>
+                </th>
+            </tr>
+            <% } %>
+    </table>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
