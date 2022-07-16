@@ -11,7 +11,7 @@ A script that reads website URL's from a given JSON file and sends http requests
 ## Tech
 - [Node.js](https://nodejs.org/en/) - evented I/O for the backend
 - [Express](http://expressjs.com/) - fast node.js network app framework
-- [Request](https://github.com/request/request) - fast node.js network app framework
+- [Request](https://github.com/request/request) - Simplified HTTP client
 - [EJS](https://ejs.co/) - Embedded JavaScript templating language
 
 
