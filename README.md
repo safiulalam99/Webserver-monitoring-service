@@ -3,10 +3,10 @@
 A script that reads website URL's from a given JSON file and sends http requests to validate if the website is down or not.
 
 ## Features 
-- Maps URL in from the given JSON file and sends HTTP requests using request library.
-- Checks if the website body content matches the given requirements.
-- Logs the output (response time, status code, content_match, last checked) to a JSON file.
-- Simultaneously starts an Express server where it hosts a HTML interface to display the URL's status 
+- [x] Maps URL in from the given JSON file and sends HTTP requests using request library.
+- [x] Checks if the website body content matches the given requirements.
+- [x] Logs the output (response time, status code, content_match, last checked) to a JSON file.
+- [x] Simultaneously starts an Express server where it hosts a HTML interface to display the URL's status 
 
 ## Tech
 - [Node.js](https://nodejs.org/en/) - evented I/O for the backend
