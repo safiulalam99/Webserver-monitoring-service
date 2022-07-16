@@ -1,6 +1,10 @@
 [
 
     {
+        "url": "https://www.sanoma.com/",
+        "content": "Sanoma is an innovative and agile learning and media company"
+    },
+    {
         "url": "https://basketball.realgm.com",
         "content": "basketball"
     },
@@ -14,7 +18,7 @@
     },
     {
         "url": "https://bravenewcoin.p.rapidapi.com/oauth/token",
-        "content": "Welcome to eroder"
+        "content": "Welcome to bravenewcoin"
     },
     {
         "url": "http://compete.com/",

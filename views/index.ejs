@@ -1,5 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
+</head>
+
+<body>
+    <h1>Check Website Status</h1>
+
+    <table>
+        <tr>
+            <th>
+                <h5>Website</h5</th>
+            <th>
+                <h5>Last checked</h5</th>
+            <th>
+                <h5>Status</h5</th>
+        </tr>
+        <% for(var i=0; i<response.length; i++) { %>
+            <tr>
+                <th>
+                    <a href="<%= response[i].URL %>">
+                        <%= response[i].URL %>
+                    </a>
+                </th>
+                <th>
+                    <a>
+                        <%= response[i].last_checked %>
+                    </a>
+                </th>
+                <th>
+                    <a>
+                        <%= response[i].status %>
+                    </a>
+                </th>
+            </tr>
+            <% } %>
+    </table>
+</body>
 <style>
     body {
         font-family:sans-serif;
@@ -42,50 +84,4 @@
         text-decoration: none;
     }
 </style>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JSON Test</title>
-</head>
-
-<body>
-    <h1>Check Website Status</h1>
-
-    <table>
-        <tr>
-            <th>
-                <h5>Website</h5</th>
-            <th>
-                <h5>Last checked</h5</th>
-            <th>
-                <h5>Status</h5</th>
-        </tr>
-        <% for(var i=0; i<text.length; i++) { %>
-            <tr>
-                <th>
-                    <a href="<%= text[i].URL %>">
-                        <%= text[i].URL %>
-                    </a>
-                </th>
-                <th>
-                    <a>
-                        <%= text[i].last_checked %>
-                    </a>
-                </th>
-                <th>
-                    <a>
-                        <%= text[i].status %>
-                    </a>
-                </th>
-            </tr>
-            <% } %>
-    </table>
-
-    <script>
-
-    </script>
-</body>
-
 </html>

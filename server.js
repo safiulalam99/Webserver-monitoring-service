@@ -2,15 +2,16 @@
 Safiul Alam
 alamsafiul99@gmail.com
 */
-
-// const l = require('./requestList.json')
 const express = require("express");
-const app = express();
 const http = require("http");
 const fs = require("fs");
 const request = require("request");
+
+const app = express();
+
 let logContent = {}; //stores individual URL tasks (status, code, response time)
 let dataToLog = []; // array where all requested URL objects are stored
+const port = 3000
 
 // reads the URL and content of the URL to compare if they exist within the body
 // of the requested page
@@ -21,8 +22,8 @@ const readFromFile = async () => {
     } else {
       const data = JSON.parse(jsonData);
       try {
-        const mappedData = await data.map((websiteURL) =>
-          UrlChecker(websiteURL)
+        const mappedData = await data.map((websiteURLs) =>
+          UrlChecker(websiteURLs)
         );
       } catch (err) {
         console.log(err);
@@ -36,11 +37,9 @@ const UrlChecker = async (URL) => {
     await request(
       { url: URL.url, time: true },
       function (error, response, body) {
-        var time = new Date();
-
         logContent = {
           URL: URL.url,
-          last_checked: time,
+          last_checked: new Date(),
           responseTime: !response ? "No response" : response.elapsedTime,
           statusCode: !response ? "failed" : response.statusCode,
           content_match: response
@@ -59,7 +58,7 @@ const UrlChecker = async (URL) => {
       }
     );
   } catch (err) {
-    console.log("ERROR IS: " + err);
+    console.log(err);
   }
 };
 
@@ -69,26 +68,21 @@ const writingToFile = (logFile) => {
     "./requestList.json",
     JSON.stringify(logFile, null, 2),
     (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Success!");
-      }
+      !err ? console.log(`Success`) : console.log(err);
     }
   );
 };
 
 readFromFile();
 
-// Hosting server to display the 
+// Hosting HTML page on server
 app.set("page", "./page");
 app.set("view engine", "ejs");
 
 app.get("", (req, res) => {
-  const some = JSON.stringify(dataToLog);
-  res.render("index", { text: dataToLog });
+  res.render("index", { response: dataToLog });
 });
 
-app.listen(3000, () =>
-  console.log(`Server is running on http://localhost:3000/`)
+app.listen(port, () =>
+  console.log(`HTML page running on http://localhost:${port}/`)
 );

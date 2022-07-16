@@ -1,7 +1,7 @@
 [
   {
     "URL": "https://eroder.com.bd/",
-    "last_checked": "2022-07-16T22:03:23.962Z",
+    "last_checked": "2022-07-16T22:38:18.575Z",
     "responseTime": "No response",
     "statusCode": "failed",
     "content_match": "No content found",
@@ -9,40 +9,48 @@
   },
   {
     "URL": "https://562271276406-2fmcdq1ue2kqia033m3pku5tjp62hio4.apps.googleusercontent.com/",
-    "last_checked": "2022-07-16T22:03:23.993Z",
-    "responseTime": 114,
+    "last_checked": "2022-07-16T22:38:18.612Z",
+    "responseTime": 200,
     "statusCode": 404,
     "content_match": true,
     "status": "up"
   },
   {
     "URL": "https://basketball.realgm.com",
-    "last_checked": "2022-07-16T22:03:24.016Z",
-    "responseTime": 147,
+    "last_checked": "2022-07-16T22:38:18.622Z",
+    "responseTime": 211,
     "statusCode": 200,
     "content_match": true,
     "status": "up"
   },
   {
     "URL": "http://topsy.com/",
-    "last_checked": "2022-07-16T22:03:24.020Z",
+    "last_checked": "2022-07-16T22:38:18.722Z",
     "responseTime": "No response",
     "statusCode": "failed",
     "content_match": "No content found",
     "status": "down"
   },
   {
+    "URL": "https://www.sanoma.com/",
+    "last_checked": "2022-07-16T22:38:18.959Z",
+    "responseTime": 561,
+    "statusCode": 200,
+    "content_match": true,
+    "status": "up"
+  },
+  {
     "URL": "http://compete.com/",
-    "last_checked": "2022-07-16T22:03:24.342Z",
-    "responseTime": 461,
+    "last_checked": "2022-07-16T22:38:18.996Z",
+    "responseTime": 583,
     "statusCode": 404,
     "content_match": false,
     "status": "up"
   },
   {
     "URL": "https://bravenewcoin.p.rapidapi.com/oauth/token",
-    "last_checked": "2022-07-16T22:03:24.357Z",
-    "responseTime": 477,
+    "last_checked": "2022-07-16T22:38:19.005Z",
+    "responseTime": 593,
     "statusCode": 401,
     "content_match": false,
     "status": "up"
