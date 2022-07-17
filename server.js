@@ -3,7 +3,6 @@ Safiul Alam
 alamsafiul99@gmail.com
 */
 const express = require("express");
-const http = require("http");
 const fs = require("fs");
 const request = require("request");
 
