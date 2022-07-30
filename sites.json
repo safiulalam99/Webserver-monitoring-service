@@ -25,6 +25,10 @@
         "content": "http://compete.com/"
     },
     {
+        "url": "http://google.com/",
+        "content": "http://compete.com/"
+    },
+    {
         "url": "http://topsy.com/",
         "content": "Please Login"
     }
